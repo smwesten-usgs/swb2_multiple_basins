@@ -1,0 +1,33 @@
+# run_control.toml
+
+[working_directories]
+swb_work_dir    = 'swb_runs'
+swb_output_dir  = 'output'
+swb_logfile_dir = 'logfile'
+
+[data_directories]
+swb_lookup_dir       = "swb_input"
+gis_data_dir         = "gis"
+
+[input_tables]
+lu_lookup_table_name   = "LU_lookup_MN_v3.txt"
+irr_lookup_table_name  = "IRR_lookup_MN_v3.txt"
+
+[input_grids]
+available_water_capacity_grid = "AWS_MN__1000m.asc"
+landuse_grid                  = "CDL_MN__2019-2023_mode__1000m.asc"
+hydrologic_soil_group_grid    = "HSG_MN__1000m.asc"
+
+[input_shapefiles]
+gaging_basins                 = "observation_basins.shp"
+
+[simulation_control]
+start_date                = "01/01/2000"
+end_date                  = "12/31/2003"
+
+[weather_data]
+weather_data_dir   = "D:/weather_and_geodata/prism/daily"
+proj4_str   = "+proj=aea +lat_1=29.5 +lat_2=45.5 +lat_0=23.0 +lon_0=-96 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs"
+precip_file = "mn_prism_gross_precipitation__1981-01-01_to_2022-12-31__688_by_620.nc"
+tmax_file   = "mn_prism_tmax__1981-01-01_to_2022-12-31__688_by_620.nc"
+tmin_file   = "mn_prism_tmin__1981-01-01_to_2022-12-31__688_by_620.nc"
